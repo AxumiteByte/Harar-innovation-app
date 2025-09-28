@@ -11,8 +11,10 @@ export default function CallToAction() {
       initial={{ opacity: 0, y: 40 }}
       animate={{ opacity: 1, y: 0 }}
       transition={{ duration: 0.8 }}
-      style={{ borderBottomLeftRadius: '3rem', borderBottomRightRadius: '3rem' }}
-    >
+      style={{
+        borderBottomLeftRadius: "3rem",
+        borderBottomRightRadius: "3rem",
+      }}>
       <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
         {t("callToAction.title")}
       </h2>
@@ -20,11 +22,15 @@ export default function CallToAction() {
         {t("callToAction.description")}
       </p>
       <Link
-        to="/register"
-        className="inline-block px-8 py-3 bg-[#FFA500] text-[#255876] font-semibold rounded-xl shadow-xl hover:shadow-2xl hover:bg-[#f2b143] transition transform duration-300"
-      >
+        to="/signup"
+        className="inline-block px-8 py-3 bg-[#FFA500] text-[#255876] font-semibold rounded-xl shadow-xl hover:shadow-2xl hover:bg-[#f2b143] transition transform duration-300">
         {t("callToAction.cta")}
       </Link>
+      <a
+        href="/contact"
+        className="inline-block ml-6 px-8 py-3 bg-[#FFA500] text-[#255876] font-semibold rounded-xl shadow-lg hover:shadow-2xl hover:bg-[#f2b143] transition transform duration-300">
+        {t("aboutPage.cta.button", "Contact Us")}
+      </a>
     </motion.section>
   );
 }

@@ -17,7 +17,10 @@ import ProgramDetails from "./pages/ProgramDetails";
 import Events from "./pages/Events";
 import EventDetailsPage from "./pages/EventDetailsPage";
 import News from "./pages/News";
+import VacanciesPage from "./pages/VacanciesPage";
+import ApplicantPage from "./pages/AdminApplicationsPage.jsx"
 import Directorate from "./pages/Directorate";
+import Services from "./pages/Service.jsx";  
 import NewsDetailsPage from "./pages/NewsDetailPage";
 import ContactPage from "./pages/ContactPage";
 
@@ -27,21 +30,19 @@ import LoginPage from "./pages/LoginPage";
 import ForgotPasswordPage from "./pages/ForgotPasswordPage";
 import ResetPasswordPage from "./pages/ResetPasswordPage";
 import EmailVerificationPage from "./pages/EmailVerificationPage";
-import DashboardPage from "./pages/DashboardPage";
 
 // Pages - Admin
 import AdminProgramsPage from "./pages/AdminProgramsPage";
 import AdminEventsPage from "./pages/AdminEventsPage";
 import AdminNewsPage from "./pages/AdminNewsPage";
 import AdminDirectoratePage from "./pages/AdminDirectoratePage";
+import AdminJobsPage from "./pages/AdminJobsPage";
 
 import AdminRoute from "./routes/Admin.route";
 import AdminLayout from "./layouts/AdminLayout"; // You should create this layout
 
 // Store
 import { useAuthStore } from "./store/authStore";
-import Navbar from "./components/Navbar.jsx";
-import Footer from "./components/Footer.jsx";
 import AuthLayout from "./layouts/AuthLayout.jsx";
 
 // Protect routes that require authentication
@@ -82,7 +83,9 @@ function App() {
           <Route path="/programs" element={<Programs />} />
           <Route path="/events" element={<Events />} />
           <Route path="/news" element={<News />} />
+          <Route path="/vacancies" element={<VacanciesPage />} />
           <Route path="/directorate" element={<Directorate />} />
+          <Route path="/services" element={<Services />} />
         </Route>
 
         <Route path="/programs/:id" element={<ProgramDetails />} />
@@ -134,10 +137,11 @@ function App() {
             <Route path="events" element={<AdminEventsPage />} />
             <Route path="news" element={<AdminNewsPage />} />
             <Route path="directorate" element={<AdminDirectoratePage />} />
+            <Route path="jobs" element={<AdminJobsPage />} />
+            <Route path="applications" element={<ApplicantPage />} />
           </Route>
         </Route>
       </Routes>
-
       <Toaster />
     </div>
   );

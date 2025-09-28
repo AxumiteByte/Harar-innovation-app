@@ -1,6 +1,7 @@
 import { motion } from "framer-motion";
 import { Zap, Users, Award, Globe, Heart } from "lucide-react";
 import { useTranslation } from "react-i18next";
+import heroImage from "../assets/buda bar 2.jpg";
 
 export default function AboutPage() {
   const { t } = useTranslation();
@@ -83,7 +84,7 @@ export default function AboutPage() {
   ];
 
   return (
-    <main className="relative px-6 md:px-16 bg-[#f9fafa] text-[#253864] overflow-hidden py-12">
+    <main className="relative bg-[#f9fafa] text-[#253864] overflow-hidden">
       {/* Abstract shapes */}
       <motion.div
         className="absolute top-0 left-1/2 -translate-x-1/2 w-[600px] h-[600px] bg-[#255876]/20 rounded-full filter blur-3xl -z-10"
@@ -96,20 +97,35 @@ export default function AboutPage() {
         transition={{ repeat: Infinity, duration: 140, ease: "linear" }}
       />
 
-      <div className="max-w-screen-xl mx-auto space-y-24 py-20">
-        {/* Hero */}
-        <section className="text-center relative z-10">
-          <h1 className="text-5xl md:text-6xl font-extrabold text-[#255876] mb-4">
+      <section className="relative z-10 h-screen flex items-center justify-end">
+        {/* Background Image */}
+        <div className="absolute inset-0 w-full h-full">
+          <div
+            className="w-full h-full bg-cover bg-center"
+            style={{
+              backgroundImage: `url(${heroImage})`,
+            }}
+          />
+          {/* Gradient Overlay (dark on right side for readability) */}
+          <div className="absolute inset-0 bg-gradient-to-r from-black/80 via-black/40 to-transparent" />
+        </div>
+
+        {/* Hero Text Container fully on the right */}
+        <div className="relative z-10 max-w-3xl px-6 md:px-16 text-left text-white">
+          <h1 className="text-5xl md:text-6xl font-extrabold mb-6">
             {t("aboutPage.hero.title", "About Harar Innovation & Science")}
           </h1>
-          <p className="text-xl text-[#253864] max-w-3xl mx-auto leading-relaxed">
+          <p className="text-xl max-w-2xl leading-relaxed">
             {t(
               "aboutPage.hero.description",
-              "Harar Innovation & Science is a government-led platform dedicated to accelerating digital transformation, empowering local talent, and creating sustainable economic opportunities through technology and entrepreneurship."
+              "Harar Innovation & Technology Agency is a government-led platform dedicated to accelerating digital transformation, empowering local talent, and creating sustainable economic opportunities through technology and entrepreneurship."
             )}
           </p>
-        </section>
+        </div>
+      </section>
 
+      {/* Content Sections */}
+      <div className="max-w-screen-xl mx-auto space-y-24 py-20 px-6 md:px-16">
         {/* Mission & Vision */}
         <section className="grid grid-cols-1 md:grid-cols-2 gap-12 relative z-10">
           <motion.div

@@ -26,6 +26,7 @@ function Footer() {
             <li><Link to="/news" className="hover:text-purple-300">{t("News")}</Link></li>
             <li><Link to="/directorate" className="hover:text-purple-300">{t("Directorate")}</Link></li>
             <li><Link to="/about" className="hover:text-purple-300">{t("About")}</Link></li>
+            <li><Link to="/contact" className="hover:text-purple-300">{t("Countact Us")}</Link></li>
           </ul>
         </div>
 

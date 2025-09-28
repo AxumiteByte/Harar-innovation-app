@@ -58,7 +58,7 @@ export default function ProgramDetails() {
     );
 
   return (
-    <div className="min-h-screen w-full bg-[#f9fafb] text-[#253864]">
+    <div className="min-h-screen w-full bg-[#f9fafb] text-[#253864] py-12">
       <Navbar />
       <div className="max-w-4xl mx-auto px-4 py-12">
         <Link

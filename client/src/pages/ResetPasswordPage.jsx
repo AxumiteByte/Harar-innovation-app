@@ -41,9 +41,12 @@ const ResetPasswordPage = () => {
       initial={{ opacity: 0, y: 20 }}
       animate={{ opacity: 1, y: 0 }}
       transition={{ duration: 0.5 }}
-      className="max-w-md w-full bg-gray-800 bg-opacity-50 backdrop-filter backdrop-blur-xl rounded-2xl shadow-xl overflow-hidden">
+      className="max-w-md w-full bg-[#f9fafa] rounded-2xl overflow-hidden
+                 shadow-[0_10px_25px_-5px_rgba(242,177,67,0.4)]
+                 hover:shadow-[0_15px_30px_-10px_rgba(242,177,67,0.5)]
+                 transition-shadow duration-300">
       <div className="p-8">
-        <h2 className="text-3xl font-bold mb-6 text-center bg-gradient-to-r from-green-400 to-emerald-500 text-transparent bg-clip-text">
+        <h2 className="text-3xl font-bold mb-6 text-center  bg-[#255876] text-transparent bg-clip-text">
           Reset Password
         </h2>
         {error && <p className="text-red-500 text-sm mb-4">{error}</p>}
@@ -71,7 +74,7 @@ const ResetPasswordPage = () => {
           <motion.button
             whileHover={{ scale: 1.02 }}
             whileTap={{ scale: 0.98 }}
-            className="w-full py-3 px-4 bg-gradient-to-r from-green-500 to-emerald-600 text-white font-bold rounded-lg shadow-lg hover:from-green-600 hover:to-emerald-700 focus:outline-none focus:ring-2 focus:ring-green-500 focus:ring-offset-2 focus:ring-offset-gray-900 transition duration-200"
+            className="w-full py-3 px-4 bg-[#255876] text-white font-bold rounded-lg shadow-lg hover:from-green-600 hover:to-emerald-700 focus:outline-none focus:ring-2 focus:ring-green-500 focus:ring-offset-2 focus:ring-offset-gray-900 transition duration-200"
             type="submit"
             disabled={isLoading}>
             {isLoading ? "Resetting..." : "Set New Password"}

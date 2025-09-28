@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 import { useParams, Link } from "react-router-dom";
 import api from "../api/api.js";
+import Navbar from "../components/Navbar.jsx";
 
 export default function NewsDetailPage() {
   const { id } = useParams();
@@ -48,6 +49,7 @@ export default function NewsDetailPage() {
 
   return (
     <div className="min-h-screen w-full bg-[#f8fafc] text-[#253864] px-4 flex flex-col py-12">
+      <Navbar />
       <div className="max-w-4xl mx-auto py-12">
         {/* News Card Style */}
         <div className="bg-white rounded-2xl shadow-lg p-8 flex flex-col gap-4">

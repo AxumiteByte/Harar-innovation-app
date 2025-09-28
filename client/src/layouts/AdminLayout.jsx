@@ -14,7 +14,9 @@ export default function AdminLayout() {
             { name: "Events", path: "/admin/events" },
             { name: "News", path: "/admin/news" },
             { name: "Directorate", path: "/admin/directorate" },
-            {name: "Home", path: "/"},
+            { name: "Jobs", path: "/admin/jobs" },
+            { name: "Applicants", path: "/admin/applications" },
+            { name: "Home", path: "/" },
           ].map((item) => (
             <NavLink
               key={item.path}
@@ -25,8 +27,7 @@ export default function AdminLayout() {
                     ? "bg-[#f2b143] text-[#253864]"
                     : "hover:bg-[#1f2f50] text-white"
                 }`
-              }
-            >
+              }>
               {item.name}
             </NavLink>
           ))}

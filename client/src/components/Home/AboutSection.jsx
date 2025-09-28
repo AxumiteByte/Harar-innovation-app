@@ -5,7 +5,7 @@ export default function AboutSection() {
   const { t } = useTranslation();
 
   return (
-    <section className="relative bg-[#025d7a] text-[#ffffff] overflow-hidden">
+    <section className="relative bg-[#025d7a] text-[#ffffff] overflow-hidden ">
       {/* Top curved divider */}
       <div className="absolute top-0 w-full overflow-hidden leading-[0] pointer-events-none">
         <svg
